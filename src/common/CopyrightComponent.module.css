@@ -1,0 +1,15 @@
+.mainDiv {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+
+.copyrightText {
+  font-size: 0.81rem;
+  padding-bottom: 2rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}

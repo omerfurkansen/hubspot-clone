@@ -1,0 +1,26 @@
+.mainDiv {
+  display: flex;
+  height: 100vh;
+}
+
+.leftDiv {
+  width: 50%; 
+  height: 100%; 
+  background: rgb(51, 71, 91); 
+  position: relative;
+}
+
+.rightDiv {
+  width: 50%; 
+  height: 100%; 
+  background: linear-gradient(45deg, rgb(106, 120, 209), rgb(0, 164, 189)); 
+  position: relative;
+}
+
+.curvedSvg {
+  position: absolute; 
+  height: 100%; 
+  bottom: 0px; 
+  left: -1px; 
+  fill:rgb(51, 71, 91);
+}
