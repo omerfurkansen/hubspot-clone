@@ -1,0 +1,109 @@
+.mainDiv {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.selectDiv {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 50vw;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.earthDiv {
+  height: 0.875rem;
+  width: 0.875rem;
+  fill: rgb(255, 255, 255);
+  margin-right: 0.25rem;
+  display: flex;
+  align-items: center;
+  & svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.selectedLanguage {
+  font-size: 0.875rem;
+}
+
+.arrow {
+  width: 0.625rem;
+  fill: rgb(255, 255, 255);
+  margin-left: 2rem;
+  transition: transform 0.3s ease 0s;
+
+  &Open {
+    transform: rotate(-180deg);
+  }
+
+  &Close {
+    transform: rotate(0deg);
+  }
+
+  & svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.allSelectionsDiv {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 3px;
+  transform-origin: 50% 0px;
+  z-index: 2;
+  text-align: left;
+
+  &Hidden {
+    transform: translateX(50%) scale(0);
+    transition: transform 0.3s cubic-bezier(0.885, -0.26, 0.135, 0.945) 0s;
+  }
+
+  &Visible {
+    transform: translateX(50%) scale(1);
+    transition: transform 0.3s cubic-bezier(0.72, 0.185, 0.095, 1.215) 0s;
+  }
+
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1rem;
+    width: 1rem;
+    transform: translate(-50%, -55%) rotate(45deg);
+    border: 1px solid black;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 3px 0px 0px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  & a:first-child {
+    padding-top: 0px;
+  }
+
+  & a:last-child {
+    padding-bottom: 0px;
+  }
+
+  & a {
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(51, 71, 91);
+    text-decoration: none;
+  }
+}

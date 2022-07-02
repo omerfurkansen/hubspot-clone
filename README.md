@@ -1,2 +1,1 @@
-# hubspot-clone
-HubSpot Clone - React
+# HubSpot Make My Persona Clone - React.js

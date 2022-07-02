@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(45, 62, 80);
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.61111em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.3125em;
+  }
+}
