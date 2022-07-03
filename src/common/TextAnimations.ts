@@ -5,6 +5,7 @@ export const fallIn = {
   from: { opacity: 0, transform: 'translate3d(0,-100%,0)' },
   to: { opacity: 1, transform: 'translate3d(0,0,0)' },
   config: { duration: INITIAL_OBJECT_ANIMATION_DURATION },
+  delay: 500,
 };
 
 const rotateAndFallBase = {
@@ -15,12 +16,12 @@ const rotateAndFallBase = {
 
 export const rotateAndFall = {
   lengthOfText: MMP_TEXT.length,
-  delay: MMP_TEXT.split('').map((t, i) => ({ ...rotateAndFallBase, delay: INITIAL_OBJECT_ANIMATION_DURATION + 150 * i }))
+  delay: MMP_TEXT.split('').map((t, i) => ({ ...rotateAndFallBase, delay: INITIAL_OBJECT_ANIMATION_DURATION + 500 + 150 * i }))
 };
 
 export const fadeIn = {
   from: { opacity: 0 },
   to: { opacity: 1 },
   config: { duration: 1000 },
-  delay: INITIAL_OBJECT_ANIMATION_DURATION + MMP_TEXT.length * 150,
+  delay: INITIAL_OBJECT_ANIMATION_DURATION + 500 + MMP_TEXT.length * 150,
 };

@@ -1,29 +1,26 @@
-import { useState } from 'react';
-import Background from '../common/Background';
+import LandingBackground from '../common/LandingBackground';
 import CopyrightComponent from '../common/CopyrightComponent';
 import LandingSelect from '../features/landing-select/LandingSelect';
 import LanguageDropdown from '../features/landing-select/LanguageDropdown';
-
 import SplashScreen from './SplashScreen';
 
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+import { useAppSelector } from '../app/hooks';
 
 export default function Landing() {
-  const [showScreens, setShowScreensTo] = useState(false);
-  // sleep(3000).then(() => setShowScreensTo(true));
+  const isLoading = useAppSelector((state) => state.landingSelect.isLoading);
+
   return (
     <>
-      {!showScreens && <SplashScreen />}
-      {/* {showScreens && (
+      {isLoading ? (
+        <SplashScreen />
+      ) : (
         <>
-          <Background />
+          <LandingBackground />
           <LanguageDropdown />
           <LandingSelect />
           <CopyrightComponent />
         </>
-      )} */}
+      )}
     </>
   );
 }

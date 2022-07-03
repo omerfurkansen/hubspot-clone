@@ -1,6 +1,6 @@
-import styles from './Background.module.css';
+import styles from './LandingBackground.module.css';
 
-export default function Background() {
+export default function LandingBackground() {
   return (
     <div className={styles.mainDiv}>
       <div className={styles.leftDiv} />
