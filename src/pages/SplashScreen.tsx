@@ -6,21 +6,28 @@ import CopyrightComponent from '../common/CopyrightComponent';
 const INITIAL_OBJECT_ANIMATION_DURATION = 1000;
 
 export default function SplashScreen() {
-  const str = 'Make My Persona';
-  const text = str.split('');
-  const from = { opacity: 0, transform: 'translate3d(0,-300%,0) rotate(-60deg)' };
-  const to = { opacity: 1, transform: 'translate3d(0,0,0) rotate(0deg)' };
+  const text = 'Make My Persona'.split('');
 
-  const base = {
+  const rotateAndFall = {
     config: { mass: 5, tension: 8000, friction: 200 },
-    from: from,
-    to: to,
+    from: { opacity: 0, transform: 'translate3d(0,-300%,0) rotate(-60deg)' },
+    to: { opacity: 1, transform: 'translate3d(0,0,0) rotate(0deg)' },
   };
 
   const springs = useSprings(
     text.length,
-    text.map((t, i) => ({ ...base, delay: INITIAL_OBJECT_ANIMATION_DURATION + 150 * i }))
+    text.map((t, i) => ({ ...rotateAndFall, delay: INITIAL_OBJECT_ANIMATION_DURATION + 150 * i }))
   );
+
+  const renderMmp = () => {
+    return springs.map((s, i) => {
+      return (
+        <animated.span key={`char${i}`} className={styles.mmp} style={s}>
+          {text[i] === ' ' ? <>&nbsp;</> : text[i]}
+        </animated.span>
+      );
+    });
+  };
 
   const fallIn = useSpring({
     from: { opacity: 0, transform: 'translate3d(0,-100%,0)' },
@@ -38,15 +45,7 @@ export default function SplashScreen() {
   return (
     <div className={styles.mainDiv}>
       <animated.img src={HubspotLogo} alt="Hubspot Logo" className={styles.hubspotLogo} style={fallIn} />
-      <div className={styles.mmpBox}>
-        {springs.map((s, i) => {
-          return (
-            <animated.span key={`char${i}`} className={styles.mmp} style={s}>
-              {text[i] === ' ' ? <>&nbsp;</> : text[i]}
-            </animated.span>
-          );
-        })}
-      </div>
+      <div className={styles.mmpBox}>{renderMmp()}</div>
       <animated.h2 className={styles.mmpSubtitle} style={fadeIn}>
         A Buyer Persona Generator from HubSpot
       </animated.h2>
