@@ -40,8 +40,8 @@ export default function SplashScreen() {
         <animated.h2 className={styles.mmpSubtitle} style={fadeIn}>
           A Buyer Persona Generator from HubSpot
         </animated.h2>
+        <CopyrightComponent />
       </div>
-      <CopyrightComponent />
     </>
   );
 }
