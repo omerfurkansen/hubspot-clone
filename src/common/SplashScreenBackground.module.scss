@@ -1,0 +1,47 @@
+.bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
+  .obj1 {
+    // cyan
+    position: absolute;
+    top: -200px;
+    left: 300px;
+    width: 800px;
+    height: 800px;
+    z-index: 0;
+  }
+
+  .obj2 {
+    // yellow
+    position: absolute;
+    top: 400px;
+    right: 100px;
+    width: 1000px;
+    height: 1000px;
+    z-index: 2;
+  }
+
+  .obj3 {
+    // red
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 1000px;
+    height: 1000px;
+    transform: scale(1.2);
+    z-index: 3;
+  }
+
+  .obj4 {
+    // blue
+    position: absolute;
+    top: -200px;
+    right: -500px;
+    width: 1500px;
+    height: 1500px;
+    z-index: 1;
+  }
+}

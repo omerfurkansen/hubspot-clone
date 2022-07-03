@@ -16,13 +16,20 @@ const initialState = {
     heading: "Make My Persona Tool",
     info: "Create a buyer persona that your entire company can use to market, sell, and serve better.",
     buttonText: "Build My Persona",
-  }
+  },
+  isLoading: true,
 }
 
 const landingSelectSlice = createSlice({
   name: "landingSelect",
   initialState,
-  reducers: {}
+  reducers: {
+    setIsLoading: (state, action) => {
+      state.isLoading = action.payload;
+    }
+  }
 });
+
+export const { setIsLoading } = landingSelectSlice.actions;
 
 export default landingSelectSlice.reducer;
