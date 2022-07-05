@@ -5,6 +5,7 @@ import LanguageDropdown from '../features/landing-select/LanguageDropdown';
 import SplashScreen from './SplashScreen';
 
 import { useAppSelector } from '../app/hooks';
+import LearnMoreScreen from './LearnMoreScreen';
 
 export default function Landing() {
   const isLoading = useAppSelector((state) => state.landingSelect.isLoading);
@@ -15,10 +16,11 @@ export default function Landing() {
         <SplashScreen />
       ) : (
         <>
-          <LandingBackground />
+          <LearnMoreScreen />
+          {/* <LandingBackground />
           <LanguageDropdown />
           <LandingSelect />
-          <CopyrightComponent />
+          <CopyrightComponent /> */}
         </>
       )}
     </>
