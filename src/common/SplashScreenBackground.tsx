@@ -6,8 +6,8 @@ export default function SplashScreenBackground() {
       <svg viewBox="0 0 1054.07 835.15" className={styles.obj1}>
         <defs>
           <linearGradient id="4-gradient">
-            <stop stop-color="#00A4BD" offset="0%"></stop>
-            <stop stop-color="#00bda5" offset="100%"></stop>
+            <stop stopColor="#00A4BD" offset="0%"></stop>
+            <stop stopColor="#00bda5" offset="100%"></stop>
           </linearGradient>
         </defs>
         <path
@@ -21,8 +21,8 @@ export default function SplashScreenBackground() {
       <svg viewBox="0 0 1054.07 835.15" className={styles.obj2}>
         <defs>
           <linearGradient id="3-gradient">
-            <stop stop-color="#ff8f59" offset="0%"></stop>
-            <stop stop-color="#f5c26b" offset="100%"></stop>
+            <stop stopColor="#ff8f59" offset="0%"></stop>
+            <stop stopColor="#f5c26b" offset="100%"></stop>
           </linearGradient>
         </defs>
         <path
@@ -36,8 +36,8 @@ export default function SplashScreenBackground() {
       <svg viewBox="0 0 1054.07 835.15" className={styles.obj3}>
         <defs>
           <linearGradient id="2-gradient">
-            <stop stop-color="#F2545B" offset="0%"></stop>
-            <stop stop-color="#F2547D" offset="100%"></stop>
+            <stop stopColor="#F2545B" offset="0%"></stop>
+            <stop stopColor="#F2547D" offset="100%"></stop>
           </linearGradient>
         </defs>
         <path
@@ -51,8 +51,8 @@ export default function SplashScreenBackground() {
       <svg viewBox="0 0 1054.07 835.15" className={styles.obj4}>
         <defs>
           <linearGradient id="1-gradient">
-            <stop stop-color="#6A78D1" offset="0%"></stop>
-            <stop stop-color="#00A4BD" offset="100%"></stop>
+            <stop stopColor="#6A78D1" offset="0%"></stop>
+            <stop stopColor="#00A4BD" offset="100%"></stop>
           </linearGradient>
         </defs>
         <path
