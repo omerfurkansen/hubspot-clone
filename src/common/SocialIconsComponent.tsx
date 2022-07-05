@@ -21,8 +21,8 @@ export default function SocialIconsComponent() {
               >
                 <defs>
                   <linearGradient x1="3.74939946e-31%" y1="100%" x2="100%" y2="1.11022302e-14%" id="gradient">
-                    <stop stop-color="#6A78D1" offset="0%"></stop>
-                    <stop stop-color="#00A4BD" offset="100%"></stop>
+                    <stop stopColor="#6A78D1" offset="0%"></stop>
+                    <stop stopColor="#00A4BD" offset="100%"></stop>
                   </linearGradient>
                 </defs>
                 <path
@@ -52,8 +52,8 @@ export default function SocialIconsComponent() {
               >
                 <defs>
                   <linearGradient x1="3.74939946e-31%" y1="100%" x2="100%" y2="1.11022302e-14%" id="gradient">
-                    <stop stop-color="#6A78D1" offset="0%"></stop>
-                    <stop stop-color="#00A4BD" offset="100%"></stop>
+                    <stop stopColor="#6A78D1" offset="0%"></stop>
+                    <stop stopColor="#00A4BD" offset="100%"></stop>
                   </linearGradient>
                 </defs>
                 <path
@@ -88,8 +88,8 @@ export default function SocialIconsComponent() {
               >
                 <defs>
                   <linearGradient x1="3.74939946e-31%" y1="100%" x2="100%" y2="1.11022302e-14%" id="gradient">
-                    <stop stop-color="#6A78D1" offset="0%"></stop>
-                    <stop stop-color="#00A4BD" offset="100%"></stop>
+                    <stop stopColor="#6A78D1" offset="0%"></stop>
+                    <stop stopColor="#00A4BD" offset="100%"></stop>
                   </linearGradient>
                 </defs>
                 <path
@@ -124,8 +124,8 @@ export default function SocialIconsComponent() {
               >
                 <defs>
                   <linearGradient x1="3.74939946e-31%" y1="100%" x2="100%" y2="1.11022302e-14%" id="gradient">
-                    <stop stop-color="#6A78D1" offset="0%"></stop>
-                    <stop stop-color="#00A4BD" offset="100%"></stop>
+                    <stop stopColor="#6A78D1" offset="0%"></stop>
+                    <stop stopColor="#00A4BD" offset="100%"></stop>
                   </linearGradient>
                 </defs>
                 <path

@@ -1,17 +1,90 @@
 .contentBox {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  z-index: 3;
 }
 
 .whiteBalloon {
   width: 80%;
   height: 80%;
   fill: rgb(255, 255, 255);
-  z-index: 3;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.carouselBox {
+  width: 100%;
+}
+
+.carouselEach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carouselTitle {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(45, 62, 80);
+  backface-visibility: hidden;
+}
+
+.carouselVideo {
+  height: 200px;
+}
+
+.carouselContent {
+  max-width: 35%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(45, 62, 80);
+  backface-visibility: hidden;
+  padding-bottom: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 48%;
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity 0.3s linear 0s, transform 0.3s linear 0s;
+  backface-visibility: hidden;
+
+  &Left {
+    left: 5rem;
+  }
+
+  &Right {
+    right: 5rem;
+  }
+}
+
+.indicator {
+  display: inline-block;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  bottom: 2rem;
+  margin: 1rem;
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: background-color 0.3s linear 0s;
+  cursor: pointer;
 }
