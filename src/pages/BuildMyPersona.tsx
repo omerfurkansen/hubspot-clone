@@ -47,26 +47,87 @@ const COLORS = {
 export default function BuildMyPersona() {
   const [personaName, setPernameNameTo] = useState('');
   const [showPencil, setShowPencilTo] = useState(false);
+  const [selectedProfile, setSelectedProfileTo] = useState(0);
 
-  const [personaAvatar, setPersonaAvatarTo] = useState(ProfilePhoto0);
+  const [personaAvatar, setPersonaAvatarTo] = useState(AvatarVideo0);
 
-  const profileImages = [
-    ProfilePhoto0,
-    ProfilePhoto1,
-    ProfilePhoto2,
-    ProfilePhoto3,
-    ProfilePhoto4,
-    ProfilePhoto5,
-    ProfilePhoto6,
-    ProfilePhoto7,
-    ProfilePhoto8,
-    ProfilePhoto9,
-    ProfilePhoto10,
-    ProfilePhoto11,
-    ProfilePhoto12,
-    ProfilePhoto13,
-    ProfilePhoto14,
-  ];
+  const profiles = {
+    0: {
+      photo: ProfilePhoto0,
+      video: AvatarVideo0,
+      color: COLORS.YELLOW,
+    },
+    1: {
+      photo: ProfilePhoto1,
+      video: AvatarVideo1,
+      color: COLORS.ORANGE,
+    },
+    2: {
+      photo: ProfilePhoto2,
+      video: AvatarVideo2,
+      color: COLORS.GREEN,
+    },
+    3: {
+      photo: ProfilePhoto3,
+      video: AvatarVideo3,
+      color: COLORS.PURPLE,
+    },
+    4: {
+      photo: ProfilePhoto4,
+      video: AvatarVideo4,
+      color: COLORS.PINK,
+    },
+    5: {
+      photo: ProfilePhoto5,
+      video: AvatarVideo5,
+      color: COLORS.PURPLE,
+    },
+    6: {
+      photo: ProfilePhoto6,
+      video: AvatarVideo6,
+      color: COLORS.ORANGE,
+    },
+    7: {
+      photo: ProfilePhoto7,
+      video: AvatarVideo7,
+      color: COLORS.YELLOW,
+    },
+    8: {
+      photo: ProfilePhoto8,
+      video: AvatarVideo8,
+      color: COLORS.PURPLE,
+    },
+    9: {
+      photo: ProfilePhoto9,
+      video: AvatarVideo9,
+      color: COLORS.YELLOW,
+    },
+    10: {
+      photo: ProfilePhoto10,
+      video: AvatarVideo10,
+      color: COLORS.PINK,
+    },
+    11: {
+      photo: ProfilePhoto11,
+      video: AvatarVideo11,
+      color: COLORS.ORANGE,
+    },
+    12: {
+      photo: ProfilePhoto12,
+      video: AvatarVideo12,
+      color: COLORS.GREEN,
+    },
+    13: {
+      photo: ProfilePhoto13,
+      video: AvatarVideo13,
+      color: COLORS.PURPLE,
+    },
+    14: {
+      photo: ProfilePhoto14,
+      video: AvatarVideo14,
+      color: COLORS.PINK,
+    },
+  };
 
   const onChangePersonaName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPernameNameTo(e.target.value);
@@ -79,9 +140,7 @@ export default function BuildMyPersona() {
         <ReturnToHomeComponent />
         <div className={styles.leftProfile}>
           <div className={styles.profileBox}>
-            <video className={styles.profileVideo} autoPlay>
-              <source src={AvatarVideo0} type="video/mp4" />
-            </video>
+            <video className={styles.profileVideo} src={personaAvatar} autoPlay />
           </div>
           <span className={styles.leftTitle}>Why Is This Step Important?</span>
           <span className={styles.leftDescription}>
@@ -153,13 +212,17 @@ export default function BuildMyPersona() {
             </span>
             <div className={styles.contentTitle}>Pick Your Avatar</div>
             <div className={styles.profileImagesBox}>
-              {profileImages.map((image, index) => (
-                <div key={index} className={styles.profileImageDiv} onClick={() => setPersonaAvatarTo(image)}>
+              {Object.values(profiles).map((profile, index) => (
+                <div key={index} className={styles.profileImageDiv} onClick={() => setPersonaAvatarTo(profile.video)}>
                   <div
                     className={styles.profileImageCoverage}
-                    style={{ backgroundColor: Object.values(COLORS)[index % 5] }}
+                    style={{
+                      backgroundColor: profile.color,
+                      boxShadow: selectedProfile === index ? 'rgb(255 255 255) 0px 0px 0px 3px' : 'none',
+                    }}
+                    onClick={() => setSelectedProfileTo(index)}
                   >
-                    <img src={image} className={styles.profileImage} alt="profile" />
+                    <img src={profile.photo} className={styles.profileImage} alt="profile" />
                   </div>
                 </div>
               ))}
