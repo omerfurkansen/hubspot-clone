@@ -7,7 +7,7 @@ export default function ReturnToHomeComponent() {
   const isLearnMorePage = useAppSelector((state) => state.landingSelect.currentPage === 'learn-more');
 
   return (
-    <span className={styles.returnToHomeBox} style={{ padding: `${isLearnMorePage ? '2rem' : '0'}` }}>
+    <span className={styles.returnToHomeBox} style={isLearnMorePage ? { padding: '2rem', position: 'absolute' } : {}}>
       <span>
         <svg
           version="1.1"

@@ -15,8 +15,14 @@ body {
 }
 
 h2 {
+  display: inline;
   font-size: 2rem;
   font-weight: bold;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, .5);
+  opacity: 1; /* Firefox */
 }
 
 @media screen and (max-width: 768px) {
