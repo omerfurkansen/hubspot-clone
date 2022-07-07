@@ -8,9 +8,6 @@ import Video1 from '../assets/learn-more/education-1.mp4';
 import Video2 from '../assets/learn-more/education-2.mp4';
 import Video3 from '../assets/learn-more/education-3.mp4';
 import { AnimationHandler, AnimationHandlerResponse } from 'react-responsive-carousel/lib/ts/components/Carousel/types';
-import { useAppDispatch } from '../app/hooks';
-import { setCurrentPage } from '../features/landing-select/landingSelectSlice';
-import { useEffect } from 'react';
 
 function BackgroundWhiteBalloon() {
   return (
@@ -54,12 +51,6 @@ const fadeAnimationHandler: AnimationHandler = (props, state): AnimationHandlerR
 };
 
 export default function LearnMoreScreen() {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(setCurrentPage('learn-more'));
-  }, [dispatch]);
-
   const carouselContent = [
     {
       title: 'What Is a Buyer Persona?',

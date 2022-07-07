@@ -1,0 +1,41 @@
+.leftMainSpan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 3rem;
+}
+
+.leftProfile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.profileBox {
+  height: 12rem;
+}
+
+.profileVideo {
+  height: auto;
+  width: 12rem;
+}
+
+.leftTitle {
+  max-width: 90%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin: 1rem 0px;
+}
+
+.leftDescription {
+  max-width: 90%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+

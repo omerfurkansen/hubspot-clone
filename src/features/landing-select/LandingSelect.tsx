@@ -23,7 +23,12 @@ export default function LandingSelect() {
         <img src={right.image} alt={right.imageAlt} className={styles.image} />
         <h2>{right.heading}</h2>
         <span className={styles.infoSpan}>{right.info}</span>
-        <span className={`${styles.button} ${styles.buttonRight}`}>{right.buttonText}</span>
+        <span
+          className={`${styles.button} ${styles.buttonRight}`}
+          onClick={() => dispatch(setCurrentPage('build-my-persona'))}
+        >
+          {right.buttonText}
+        </span>
       </div>
     </div>
   );
