@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  user-select: none;
 }
 
 .whiteBalloon {
@@ -22,6 +22,7 @@
 
 .carouselBox {
   width: 100%;
+  z-index: 0;
 }
 
 .carouselEach {
@@ -43,7 +44,7 @@
 }
 
 .carouselVideo {
-  height: 200px;
+  height: 20rem;
 }
 
 .carouselContent {
@@ -59,7 +60,7 @@
 .arrow {
   position: absolute;
   top: 48%;
-  z-index: 2;
+  z-index: 1;
   cursor: pointer;
   transition: opacity 0.3s linear 0s, transform 0.3s linear 0s;
   backface-visibility: hidden;

@@ -7,6 +7,20 @@
   transform: translateX(-50%);
 }
 
+.logoAnchor {
+  text-align: center;
+
+  @media (max-width: 85.375em) {
+    display: none;
+  }
+}
+
+.logoImg {
+  width: 10rem;
+  margin: 0px auto;
+  padding: 1rem 0px;
+}
+
 .copyrightText {
   font-size: 0.81rem;
   padding-bottom: 2rem;

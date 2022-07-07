@@ -1,6 +1,10 @@
+import { useAppDispatch } from '../app/hooks';
 import styles from './ReturnToHomeComponent.module.scss';
+import { setCurrentPage } from '../features/landing-select/landingSelectSlice';
 
 export default function ReturnToHomeComponent() {
+  const dispatch = useAppDispatch();
+
   return (
     <span className={styles.returnToHomeBox}>
       <span>
@@ -26,7 +30,7 @@ export default function ReturnToHomeComponent() {
           ></path>
         </svg>
       </span>
-      <span>Return to homepage</span>
+      <span onClick={() => dispatch(setCurrentPage('landing'))}>Return to homepage</span>
     </span>
   );
 }

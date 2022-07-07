@@ -9,6 +9,7 @@ import LearnMoreScreen from './LearnMoreScreen';
 
 export default function Landing() {
   const isLoading = useAppSelector((state) => state.landingSelect.isLoading);
+  const currentPage = useAppSelector((state) => state.landingSelect.currentPage);
 
   return (
     <>
@@ -16,11 +17,15 @@ export default function Landing() {
         <SplashScreen />
       ) : (
         <>
-          <LearnMoreScreen />
-          {/* <LandingBackground />
-          <LanguageDropdown />
-          <LandingSelect />
-          <CopyrightComponent /> */}
+          {currentPage === 'landing' && (
+            <>
+              <LandingBackground />
+              <LanguageDropdown />
+              <LandingSelect />
+              <CopyrightComponent />
+            </>
+          )}
+          {currentPage === 'learn-more' && <LearnMoreScreen />}
         </>
       )}
     </>
