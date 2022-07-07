@@ -18,6 +18,7 @@ const initialState = {
     buttonText: "Build My Persona",
   },
   isLoading: true,
+  currentPage: "landing",
 }
 
 const landingSelectSlice = createSlice({
@@ -26,10 +27,13 @@ const landingSelectSlice = createSlice({
   reducers: {
     setIsLoading: (state, action) => {
       state.isLoading = action.payload;
+    },
+    setCurrentPage: (state, action) => {
+      state.currentPage = action.payload;
     }
   }
 });
 
-export const { setIsLoading } = landingSelectSlice.actions;
+export const { setIsLoading, setCurrentPage } = landingSelectSlice.actions;
 
 export default landingSelectSlice.reducer;

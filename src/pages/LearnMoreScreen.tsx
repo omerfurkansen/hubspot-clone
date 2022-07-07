@@ -7,6 +7,10 @@ import Video0 from '../assets/learn-more/education-0.mp4';
 import Video1 from '../assets/learn-more/education-1.mp4';
 import Video2 from '../assets/learn-more/education-2.mp4';
 import Video3 from '../assets/learn-more/education-3.mp4';
+import { AnimationHandler, AnimationHandlerResponse } from 'react-responsive-carousel/lib/ts/components/Carousel/types';
+import { useAppDispatch } from '../app/hooks';
+import { setCurrentPage } from '../features/landing-select/landingSelectSlice';
+import { useEffect } from 'react';
 
 function BackgroundWhiteBalloon() {
   return (
@@ -19,7 +23,43 @@ function BackgroundWhiteBalloon() {
   );
 }
 
+const fadeAnimationHandler: AnimationHandler = (props, state): AnimationHandlerResponse => {
+  const transitionTime = props.transitionTime + 'ms';
+  const transitionTimingFunction = 'ease-in-out';
+
+  let slideStyle: React.CSSProperties = {
+    position: 'absolute',
+    display: 'block',
+    zIndex: -2,
+    minHeight: '100%',
+    opacity: 0,
+    top: 0,
+    left: 0,
+    transform: 'scale(0.8)',
+    transitionTimingFunction: transitionTimingFunction,
+  };
+
+  if (!state.swiping) {
+    slideStyle = {
+      ...slideStyle,
+      transitionDuration: transitionTime,
+    };
+  }
+
+  return {
+    slideStyle,
+    selectedStyle: { ...slideStyle, opacity: 1, position: 'relative', transform: 'scale(1)' },
+    prevStyle: { ...slideStyle },
+  };
+};
+
 export default function LearnMoreScreen() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(setCurrentPage('learn-more'));
+  }, [dispatch]);
+
   const carouselContent = [
     {
       title: 'What Is a Buyer Persona?',
@@ -56,7 +96,7 @@ export default function LearnMoreScreen() {
         <BackgroundWhiteBalloon />
         <Carousel
           showThumbs={false}
-          transitionTime={0}
+          animationHandler={fadeAnimationHandler}
           showStatus={false}
           autoFocus
           useKeyboardArrows
@@ -146,7 +186,7 @@ export default function LearnMoreScreen() {
           {carouselContent.map((content, index) => (
             <div key={index} className={styles.carouselEach}>
               <span className={styles.carouselTitle}>{content.title}</span>
-              <video autoPlay muted className={styles.carouselVideo}>
+              <video autoPlay loop muted className={styles.carouselVideo}>
                 <source src={content.video} type="video/mp4" />
               </video>
               <span className={styles.carouselContent}>{content.content}</span>
