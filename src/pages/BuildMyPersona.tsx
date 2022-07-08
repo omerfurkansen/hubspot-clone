@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { CSSProperties, useEffect, useRef, useState } from 'react';
 import ReturnToHomeComponent from '../common/ReturnToHomeComponent';
 import BuildMyPersonaBackground from '../common/BuildMyPersonaBackground';
 import styles from './BuildMyPersona.module.scss';
@@ -56,6 +56,69 @@ function FirstPageContent() {
         ))}
       </div>
     </>
+  );
+}
+
+function stylingForTrack(values: any): CSSProperties {
+  return {
+    height: '0.2rem',
+    background: getTrackBackground({
+      values: values,
+      colors: ['rgb(255, 255, 255)', 'rgba(203, 214, 226, .2)'],
+      min: 0,
+      max: 100,
+    }),
+    cursor: 'pointer',
+  };
+}
+
+const stylingForLabel: CSSProperties = {
+  height: '1.5rem',
+  width: '1.5rem',
+  borderRadius: '50%',
+  backgroundColor: 'rgb(255, 255, 255)',
+  cursor: 'pointer',
+};
+
+const stylingForThumb: CSSProperties = {
+  position: 'absolute',
+  top: 0,
+  left: '50%',
+  width: '10em',
+  color: '#fff',
+  fontWeight: 500,
+  fontSize: 15,
+  textAlign: 'center',
+  transform: 'translate(-50%, -125%)',
+  willChange: 'transform',
+};
+
+function RenderRange(rangeProps: any) {
+  return (
+    <Range
+      min={0}
+      max={100}
+      step={0.01}
+      values={rangeProps.values}
+      onChange={(values) => {
+        rangeProps.setValues(values);
+      }}
+      renderTrack={({ props, children }) => (
+        <div
+          ref={props.ref}
+          style={stylingForTrack(rangeProps.values)}
+          onMouseDown={props.onMouseDown}
+          onTouchStart={props.onTouchStart}
+        >
+          {children}
+        </div>
+      )}
+      renderThumb={({ props }) => (
+        <div {...props} style={stylingForLabel}>
+          <div style={stylingForThumb}>{rangeProps.showText(rangeProps.values[0])}</div>
+        </div>
+      )}
+    />
   );
 }
 
@@ -135,125 +198,13 @@ function SecondPageContent() {
     <>
       <div className={styles.contentTitle}>How Old Are They?</div>
       <div className={styles.contentAgePickerBox}>
-        <Range
-          min={0}
-          max={100}
-          step={0.01}
-          values={values}
-          onChange={(values) => {
-            setValues(values);
-          }}
-          renderTrack={({ props, children }) => (
-            <div
-              ref={props.ref}
-              style={{
-                height: '0.2rem',
-                background: getTrackBackground({
-                  values,
-                  colors: ['rgb(255, 255, 255)', 'rgba(203, 214, 226, .2)'],
-                  min: 0,
-                  max: 100,
-                }),
-                cursor: 'pointer',
-              }}
-              onMouseDown={props.onMouseDown}
-              onTouchStart={props.onTouchStart}
-            >
-              {children}
-            </div>
-          )}
-          renderThumb={({ props }) => (
-            <div
-              {...props}
-              style={{
-                height: '1.5rem',
-                width: '1.5rem',
-                borderRadius: '50%',
-                backgroundColor: 'rgb(255, 255, 255)',
-                cursor: 'pointer',
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: '50%',
-                  width: '10em',
-                  color: '#fff',
-                  fontWeight: 500,
-                  fontSize: 15,
-                  textAlign: 'center',
-                  transform: 'translate(-50%, -125%)',
-                  willChange: 'transform',
-                }}
-              >
-                {showText(values[0])}
-              </div>
-            </div>
-          )}
-        />
+        <RenderRange values={values} setValues={setValues} showText={showText} />
       </div>
       <div className={styles.contentTitle}>
         What is the highest degree or level of school your persona has completed?
       </div>
       <div className={styles.contentAgePickerBox}>
-        <Range
-          min={0}
-          max={100}
-          step={0.01}
-          values={valuesForSecond}
-          onChange={(values) => {
-            setValuesForSecond(values);
-          }}
-          renderTrack={({ props, children }) => (
-            <div
-              ref={props.ref}
-              style={{
-                height: '0.2rem',
-                background: getTrackBackground({
-                  values: valuesForSecond,
-                  colors: ['rgb(255, 255, 255)', 'rgba(203, 214, 226, .2)'],
-                  min: 0,
-                  max: 100,
-                }),
-                cursor: 'pointer',
-              }}
-              onMouseDown={props.onMouseDown}
-              onTouchStart={props.onTouchStart}
-            >
-              {children}
-            </div>
-          )}
-          renderThumb={({ props }) => (
-            <div
-              {...props}
-              style={{
-                height: '1.5rem',
-                width: '1.5rem',
-                borderRadius: '50%',
-                backgroundColor: 'rgb(255, 255, 255)',
-                cursor: 'pointer',
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: '50%',
-                  width: '10em',
-                  color: '#fff',
-                  fontWeight: 500,
-                  fontSize: 15,
-                  textAlign: 'center',
-                  transform: 'translate(-50%, -125%)',
-                  willChange: 'transform',
-                }}
-              >
-                {showTextForSecond(valuesForSecond[0])}
-              </div>
-            </div>
-          )}
-        />
+        <RenderRange values={valuesForSecond} setValues={setValuesForSecond} showText={showTextForSecond} />
       </div>
     </>
   );
