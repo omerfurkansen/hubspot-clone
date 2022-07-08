@@ -29,7 +29,7 @@ export default function BuildMyPersona() {
         <span
           className={styles.indicator}
           style={{ backgroundColor: selectedPage === i ? 'white' : 'transparent' }}
-          onClick={() => setSelectedPage(i)}
+          onClick={() => dispatch(setSelectedPage(i))}
           key={i}
         />
       );
@@ -67,8 +67,8 @@ export default function BuildMyPersona() {
         </div>
         <div className={styles.rightContentBox}>
           <div className={styles.content}>
-            {/* <FirstPageContent /> */}
-            <SecondPageContent />
+            {selectedPage === 0 && <FirstPageContent />}
+            {selectedPage === 1 && <SecondPageContent />}
           </div>
         </div>
       </span>
