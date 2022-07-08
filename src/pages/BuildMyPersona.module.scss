@@ -147,6 +147,10 @@
   margin-bottom: 2rem;
   transition: box-shadow 0.3s linear 0s;
   cursor: pointer;
+  
+  &:hover {
+    box-shadow: rgb(255 255 255) 0px 0px 0px 3px;
+  }
 }
 
 .profileImage {
@@ -223,4 +227,13 @@
   border-radius: 50%;
   transition: background-color 0.3s linear 0s;
   cursor: pointer;
+}
+
+// Second Page
+.contentAgePickerBox {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0px;
+  -webkit-box-align: center;
+  align-items: center;
 }

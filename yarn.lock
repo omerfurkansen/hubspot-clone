@@ -7342,6 +7342,11 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-range@^1.8.13:
+  version "1.8.13"
+  resolved "https://registry.yarnpkg.com/react-range/-/react-range-1.8.13.tgz#68dd104dcf70d1ac232a5bc87dd54d72c7e5e66d"
+  integrity sha512-Hp7JhEm5hdmBTkbAZLzFet93RgHtEWyba0LQzavZstJDp6kUAIy3c/9PGuICTRq+tUEFN442eeqGbHqZlq4KeA==
+
 react-redux@^8.0.1:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.0.2.tgz#bc2a304bb21e79c6808e3e47c50fe1caf62f7aad"
