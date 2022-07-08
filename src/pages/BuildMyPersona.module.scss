@@ -70,6 +70,7 @@
 
 .content {
   display: flex;
+  height: 80vh;
   flex-direction: column;
 
   &Title {
@@ -233,7 +234,66 @@
 .contentAgePickerBox {
   position: relative;
   width: 100%;
-  padding: 3rem 0px;
+  padding: 3rem 0px 5rem;
   -webkit-box-align: center;
   align-items: center;
+}
+
+// Third Page
+.selectBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.selectBoxFirstItem {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px 1rem;
+  border-radius: 3px;
+  color: rgb(45, 62, 80);
+  background-color: rgb(234, 240, 246);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.selectBoxOtherItems {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0px;
+  width: 100%;
+  height: auto;
+  max-height: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  z-index: 1;
+  transition: max-height 0.3s cubic-bezier(0.43, 1.44, 0.555, 1.175) 0s;
+  overflow-y: scroll;
+
+  &Each {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: rgb(45, 62, 80);
+    cursor: pointer;
+  }
+}
+
+.bottomImageForSelection {
+  position: absolute;
+  bottom: -0.6rem;
+  left: 5rem;
+  width: 55%;
+  pointer-events: none;
+}
+
+.bottomImageSpan {
+  width: 100%;
+  height: auto;
 }
