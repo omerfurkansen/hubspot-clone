@@ -8,6 +8,7 @@
   flex-direction: column;
   width: 25%;
   margin: 3rem;
+  height: 90vh;
 }
 
 .leftProfile {
@@ -53,7 +54,7 @@
 
 .rightTitleBox {
   display: inline;
-  padding: 5rem 0px .5rem 10rem;
+  padding: 6rem 0px .5rem 10rem;
   color: rgb(255, 255, 255);
   font-size: 2rem;
 }
@@ -64,7 +65,7 @@
   padding: 0px 15% 5rem 10rem;
   overflow-y: scroll;
   max-height: calc(100vh - 12rem);
-  width: 50%;
+  width: 53%;
 }
 
 .content {
@@ -154,4 +155,72 @@
   height: auto;
   width: 100%;
   overflow: visible;
+}
+
+// Page Buttons
+
+.pageButtons {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  width: 6rem;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+
+  &Each {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s linear 0s, transform 0.3s linear 0s;
+    backface-visibility: hidden;
+  }
+}
+
+// Left Part Bottom and Indicator 
+
+.leftPartBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &Button {
+    display: inline;
+    visibility: visible;
+    padding: 0.8rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+  }
+}
+
+.indicatorBox {
+  bottom: 0px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  max-width: 75%;
+  padding-bottom: 3rem;
+}
+
+.indicator {
+  display: inline-block;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  bottom: 2rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: background-color 0.3s linear 0s;
+  cursor: pointer;
 }

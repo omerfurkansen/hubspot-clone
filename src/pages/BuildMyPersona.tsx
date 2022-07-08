@@ -133,6 +133,26 @@ export default function BuildMyPersona() {
     setPernameNameTo(e.target.value);
   };
 
+  const [selectedPage, setSelectedPageTo] = useState(0);
+
+  const renderIndicator = () => {
+    let result = [];
+    for (let i = 0; i < 7; i++) {
+      result.push(
+        <span
+          className={styles.indicator}
+          style={{ backgroundColor: selectedPage === i ? 'white' : 'transparent' }}
+          onClick={() => setSelectedPageTo(i)}
+          // onKeyDown={clickHandler}
+          key={i}
+          role="button"
+          tabIndex={0}
+        />
+      );
+    }
+    return result;
+  };
+
   return (
     <div>
       <BuildMyPersonaBackground />
@@ -148,6 +168,10 @@ export default function BuildMyPersona() {
             you start thinking about this persona like a real person. Pro tip: Consider naming your buyer persona with
             their industry in mind to make it easier to remember, like Marketing Mary or Finance Fred
           </span>
+        </div>
+        <div className={styles.leftPartBottom}>
+          <div className={styles.indicatorBox}>{renderIndicator()}</div>
+          <span className={styles.leftPartBottomButton}>Skip walkthrough mode</span>
         </div>
       </span>
       <span className={styles.rightMainSpan}>
@@ -230,6 +254,77 @@ export default function BuildMyPersona() {
           </div>
         </div>
       </span>
+      <div className={styles.pageButtons}>
+        <span
+          className={styles.pageButtonsEach}
+          style={selectedPage === 0 ? { opacity: 0.3, pointerEvents: 'none' } : {}}
+          onClick={() => selectedPage !== 0 && setSelectedPageTo(selectedPage - 1)}
+        >
+          <span style={{ width: 40 }}>
+            <svg
+              version="1.1"
+              id="Layer_1___7qFbhi8C"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 40 40"
+              enableBackground="new 0 0 40 40"
+              xmlSpace="preserve"
+            >
+              <path
+                id="Combined-Shape___7qFbhi8C"
+                fill="#FFFFFF"
+                d="M3,40h34c1.65685,0,3-1.34315,3-3V3c0-1.65685-1.34315-3-3-3H3C1.34315,0,0,1.34315,0,3
+	v34C0,38.65685,1.34315,40,3,40z"
+              ></path>
+              <path
+                id="Icon_x2F_Actions_x2F_Carat-Left-S___7qFbhi8C"
+                fill="#31465E"
+                d="M23.62299,27.63345c-0.50268,0.48874-1.31519,0.48874-1.81787,0
+	l-6.42811-6.24987c-0.50268-0.48874-0.50268-1.27872,0-1.76746l6.42811-6.24987C22.05582,13.1225,22.38494,13,22.71406,13
+	s0.65824,0.1225,0.90894,0.36624c0.50268,0.48874,0.50268,1.27872,0,1.76746l-5.51918,5.36614l5.51918,5.36614
+	C24.12567,26.35472,24.12567,27.14471,23.62299,27.63345"
+              ></path>
+            </svg>
+          </span>
+        </span>
+        <span
+          className={styles.pageButtonsEach}
+          style={selectedPage === 6 ? { opacity: 0.3, pointerEvents: 'none' } : {}}
+          onClick={() => selectedPage !== 6 && setSelectedPageTo(selectedPage + 1)}
+        >
+          <span>
+            <svg
+              version="1.1"
+              id="Layer_1___7qFbhi8C"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 40 40"
+              enableBackground="new 0 0 40 40"
+              xmlSpace="preserve"
+              style={{ transform: 'rotate(180deg)' }}
+            >
+              <path
+                id="Combined-Shape___7qFbhi8C"
+                fill="#FFFFFF"
+                d="M3,40h34c1.65685,0,3-1.34315,3-3V3c0-1.65685-1.34315-3-3-3H3C1.34315,0,0,1.34315,0,3
+	v34C0,38.65685,1.34315,40,3,40z"
+              ></path>
+              <path
+                id="Icon_x2F_Actions_x2F_Carat-Left-S___7qFbhi8C"
+                fill="#31465E"
+                d="M23.62299,27.63345c-0.50268,0.48874-1.31519,0.48874-1.81787,0
+	l-6.42811-6.24987c-0.50268-0.48874-0.50268-1.27872,0-1.76746l6.42811-6.24987C22.05582,13.1225,22.38494,13,22.71406,13
+	s0.65824,0.1225,0.90894,0.36624c0.50268,0.48874,0.50268,1.27872,0,1.76746l-5.51918,5.36614l5.51918,5.36614
+	C24.12567,26.35472,24.12567,27.14471,23.62299,27.63345"
+              ></path>
+            </svg>
+          </span>
+        </span>
+      </div>
     </div>
   );
 }
