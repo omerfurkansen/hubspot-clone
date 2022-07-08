@@ -1,12 +1,13 @@
-import { useAppDispatch } from '../app/hooks';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 import styles from './ReturnToHomeComponent.module.scss';
 import { setCurrentPage } from '../features/landing-select/landingSelectSlice';
 
 export default function ReturnToHomeComponent() {
   const dispatch = useAppDispatch();
+  const isLearnMorePage = useAppSelector((state) => state.landingSelect.currentPage === 'learn-more');
 
   return (
-    <span className={styles.returnToHomeBox}>
+    <span className={styles.returnToHomeBox} style={isLearnMorePage ? { padding: '2rem', position: 'absolute' } : {}}>
       <span>
         <svg
           version="1.1"

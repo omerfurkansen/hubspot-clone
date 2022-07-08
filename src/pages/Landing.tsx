@@ -6,6 +6,7 @@ import SplashScreen from './SplashScreen';
 
 import { useAppSelector } from '../app/hooks';
 import LearnMoreScreen from './LearnMoreScreen';
+import BuildMyPersona from './BuildMyPersona';
 
 export default function Landing() {
   const isLoading = useAppSelector((state) => state.landingSelect.isLoading);
@@ -26,6 +27,7 @@ export default function Landing() {
             </>
           )}
           {currentPage === 'learn-more' && <LearnMoreScreen />}
+          {currentPage === 'build-my-persona' && <BuildMyPersona />}
         </>
       )}
     </>

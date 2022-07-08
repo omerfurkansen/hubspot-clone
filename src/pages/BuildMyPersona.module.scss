@@ -1,0 +1,239 @@
+// Left Part
+
+.leftMainSpan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 3rem;
+  height: 90vh;
+}
+
+.leftProfile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.profileBox {
+  height: 12rem;
+}
+
+.profileVideo {
+  height: auto;
+  width: 12rem;
+}
+
+.leftTitle {
+  max-width: 90%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin: 1rem 0px;
+}
+
+.leftDescription {
+  max-width: 80%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+// Right Part
+.rightMainSpan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.rightTitleBox {
+  display: inline;
+  padding: 6rem 0px .5rem 10rem;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+
+.rightContentBox {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15% 5rem 10rem;
+  overflow-y: scroll;
+  max-height: calc(100vh - 12rem);
+  width: 53%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  &Title {
+    padding: 2rem 0px 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+  }
+
+  &Input {
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    outline: none;
+    padding: 0.5rem 0px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+}
+
+.contentInputBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.contentInputSpan {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.contentInputPen {
+  position: absolute;
+  right: 0px;
+  height: 1rem;
+  width: 1rem;
+  transition: opacity 0.3s linear 0s, transform 0.3s linear 0s;
+}
+
+.penSvg {
+  fill: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  animation: 0.3s cubic-bezier(0.43, 1.44, 0.555, 1.175) 0s 1 normal none running kpIXhZ;
+}
+
+// Profile Images
+
+.profileImagesBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profileImageDiv {
+  width: 20%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+
+  @media screen and (max-width: 85.375em) {
+    width: 25%;
+  }
+}
+
+.profileImageCoverage {
+  position: relative;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s linear 0s;
+  cursor: pointer;
+  
+  &:hover {
+    box-shadow: rgb(255 255 255) 0px 0px 0px 3px;
+  }
+}
+
+.profileImage {
+  position: absolute;
+  bottom: 0px;
+  height: auto;
+  width: 100%;
+  overflow: visible;
+}
+
+// Page Buttons
+
+.pageButtons {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  width: 6rem;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+
+  &Each {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s linear 0s, transform 0.3s linear 0s;
+    backface-visibility: hidden;
+  }
+}
+
+// Left Part Bottom and Indicator 
+
+.leftPartBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &Button {
+    display: inline;
+    visibility: visible;
+    padding: 0.8rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+  }
+}
+
+.indicatorBox {
+  bottom: 0px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  max-width: 75%;
+  padding-bottom: 3rem;
+}
+
+.indicator {
+  display: inline-block;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  bottom: 2rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: background-color 0.3s linear 0s;
+  cursor: pointer;
+}
+
+// Second Page
+.contentAgePickerBox {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0px;
+  -webkit-box-align: center;
+  align-items: center;
+}
