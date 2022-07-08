@@ -59,7 +59,7 @@ function FirstPageContent() {
   );
 }
 
-function stylingForTrack(values: any): CSSProperties {
+function stylingForTrack(values: number[]): CSSProperties {
   return {
     height: '0.2rem',
     background: getTrackBackground({
@@ -93,7 +93,18 @@ const stylingForThumb: CSSProperties = {
   willChange: 'transform',
 };
 
-function RenderRange(rangeProps: any) {
+function showText(number: number, texts: string[]): string {
+  const limit = 100 / texts.length;
+  let latestString = '';
+  texts.forEach((text, index) => {
+    if (number >= index * limit && number < (index + 1) * limit) {
+      latestString = text;
+    }
+  });
+  return latestString;
+}
+
+function RenderRange(rangeProps: { values: number[]; texts: string[]; setValues: (values: number[]) => void }) {
   return (
     <Range
       min={0}
@@ -115,7 +126,7 @@ function RenderRange(rangeProps: any) {
       )}
       renderThumb={({ props }) => (
         <div {...props} style={stylingForLabel}>
-          <div style={stylingForThumb}>{rangeProps.showText(rangeProps.values[0])}</div>
+          <div style={stylingForThumb}>{showText(rangeProps.values[0], rangeProps.texts)}</div>
         </div>
       )}
     />
@@ -123,8 +134,9 @@ function RenderRange(rangeProps: any) {
 }
 
 function SecondPageContent() {
-  const [values, setValues] = useState([0]);
-  const [valuesForSecond, setValuesForSecond] = useState([0]);
+  const [firstRangeValues, setFirstRangeValues] = useState([0]);
+  const [secondRangeValues, setSecondRangeValues] = useState([0]);
+
   const texts = [
     'Under 18 years',
     '18 to 24 years',
@@ -146,65 +158,17 @@ function SecondPageContent() {
     'Doctorate degree (e.g. PhD, EdD)',
   ];
 
-  function showText(number: number) {
-    const limit = 100 / 7;
-    if (number > limit * 6) {
-      return texts[6];
-    }
-    if (number > limit * 5) {
-      return texts[5];
-    }
-    if (number > limit * 4) {
-      return texts[4];
-    }
-    if (number > limit * 3) {
-      return texts[3];
-    }
-    if (number > limit * 2) {
-      return texts[2];
-    }
-    if (number > limit) {
-      return texts[1];
-    }
-    return texts[0];
-  }
-
-  function showTextForSecond(number: number) {
-    const limit = 100 / 8;
-    if (number > limit * 7) {
-      return textsSecond[7];
-    }
-    if (number > limit * 6) {
-      return textsSecond[6];
-    }
-    if (number > limit * 5) {
-      return textsSecond[5];
-    }
-    if (number > limit * 4) {
-      return textsSecond[4];
-    }
-    if (number > limit * 3) {
-      return textsSecond[3];
-    }
-    if (number > limit * 2) {
-      return textsSecond[2];
-    }
-    if (number > limit) {
-      return textsSecond[1];
-    }
-    return textsSecond[0];
-  }
   return (
     <>
       <div className={styles.contentTitle}>How Old Are They?</div>
       <div className={styles.contentAgePickerBox}>
-        <RenderRange values={values} setValues={setValues} showText={showText} />
+        <RenderRange values={firstRangeValues} texts={texts} setValues={setFirstRangeValues} />
       </div>
       <div className={styles.contentTitle}>
         What is the highest degree or level of school your persona has completed?
       </div>
       <div className={styles.contentAgePickerBox}>
-        <RenderRange values={valuesForSecond} setValues={setValuesForSecond} showText={showTextForSecond} />
+        <RenderRange values={secondRangeValues} texts={textsSecond} setValues={setSecondRangeValues} />
       </div>
     </>
   );
