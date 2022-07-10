@@ -46,6 +46,22 @@ import Page3AvatarVideo12 from '../assets/pages/3/avatar-step-12.mp4';
 import Page3AvatarVideo13 from '../assets/pages/3/avatar-step-13.mp4';
 import Page3AvatarVideo14 from '../assets/pages/3/avatar-step-14.mp4';
 
+import Page4AvatarVideo0 from '../assets/pages/4/avatar-step-0.mp4';
+import Page4AvatarVideo1 from '../assets/pages/4/avatar-step-1.mp4';
+import Page4AvatarVideo2 from '../assets/pages/4/avatar-step-2.mp4';
+import Page4AvatarVideo3 from '../assets/pages/4/avatar-step-3.mp4';
+import Page4AvatarVideo4 from '../assets/pages/4/avatar-step-4.mp4';
+import Page4AvatarVideo5 from '../assets/pages/4/avatar-step-5.mp4';
+import Page4AvatarVideo6 from '../assets/pages/4/avatar-step-6.mp4';
+import Page4AvatarVideo7 from '../assets/pages/4/avatar-step-7.mp4';
+import Page4AvatarVideo8 from '../assets/pages/4/avatar-step-8.mp4';
+import Page4AvatarVideo9 from '../assets/pages/4/avatar-step-9.mp4';
+import Page4AvatarVideo10 from '../assets/pages/4/avatar-step-10.mp4';
+import Page4AvatarVideo11 from '../assets/pages/4/avatar-step-11.mp4';
+import Page4AvatarVideo12 from '../assets/pages/4/avatar-step-12.mp4';
+import Page4AvatarVideo13 from '../assets/pages/4/avatar-step-13.mp4';
+import Page4AvatarVideo14 from '../assets/pages/4/avatar-step-14.mp4';
+
 import ProfilePhoto0 from '../assets/pages/1/profiles/avatar-0.svg';
 import ProfilePhoto1 from '../assets/pages/1/profiles/avatar-1.svg';
 import ProfilePhoto2 from '../assets/pages/1/profiles/avatar-2.svg';
@@ -74,91 +90,91 @@ export const profiles = {
   0: {
     id: 0,
     photo: ProfilePhoto0,
-    video: [Page1AvatarVideo0, Page2AvatarVideo0, Page3AvatarVideo0],
+    video: [Page1AvatarVideo0, Page2AvatarVideo0, Page3AvatarVideo0, Page4AvatarVideo0],
     color: COLORS.YELLOW,
   },
   1: {
     id: 1,
     photo: ProfilePhoto1,
-    video: [Page1AvatarVideo1, Page2AvatarVideo1, Page3AvatarVideo1],
+    video: [Page1AvatarVideo1, Page2AvatarVideo1, Page3AvatarVideo1, Page4AvatarVideo1],
     color: COLORS.ORANGE,
   },
   2: {
     id: 2,
     photo: ProfilePhoto2,
-    video: [Page1AvatarVideo2, Page2AvatarVideo2, Page3AvatarVideo2],
+    video: [Page1AvatarVideo2, Page2AvatarVideo2, Page3AvatarVideo2, Page4AvatarVideo2],
     color: COLORS.GREEN,
   },
   3: {
     id: 3,
     photo: ProfilePhoto3,
-    video: [Page1AvatarVideo3, Page2AvatarVideo3, Page3AvatarVideo3],
+    video: [Page1AvatarVideo3, Page2AvatarVideo3, Page3AvatarVideo3, Page4AvatarVideo3],
     color: COLORS.PURPLE,
   },
   4: {
     id: 4,
     photo: ProfilePhoto4,
-    video: [Page1AvatarVideo4, Page2AvatarVideo4, Page3AvatarVideo4],
+    video: [Page1AvatarVideo4, Page2AvatarVideo4, Page3AvatarVideo4, Page4AvatarVideo4],
     color: COLORS.PINK,
   },
   5: {
     id: 5,
     photo: ProfilePhoto5,
-    video: [Page1AvatarVideo5, Page2AvatarVideo5, Page3AvatarVideo5],
+    video: [Page1AvatarVideo5, Page2AvatarVideo5, Page3AvatarVideo5, Page4AvatarVideo5],
     color: COLORS.PURPLE,
   },
   6: {
     id: 6,
     photo: ProfilePhoto6,
-    video: [Page1AvatarVideo6, Page2AvatarVideo6, Page3AvatarVideo6],
+    video: [Page1AvatarVideo6, Page2AvatarVideo6, Page3AvatarVideo6, Page4AvatarVideo6],
     color: COLORS.ORANGE,
   },
   7: {
     id: 7,
     photo: ProfilePhoto7,
-    video: [Page1AvatarVideo7, Page2AvatarVideo7, Page3AvatarVideo7],
+    video: [Page1AvatarVideo7, Page2AvatarVideo7, Page3AvatarVideo7, Page4AvatarVideo7],
     color: COLORS.YELLOW,
   },
   8: {
     id: 8,
     photo: ProfilePhoto8,
-    video: [Page1AvatarVideo8, Page2AvatarVideo8, Page3AvatarVideo8],
+    video: [Page1AvatarVideo8, Page2AvatarVideo8, Page3AvatarVideo8, Page4AvatarVideo8],
     color: COLORS.PURPLE,
   },
   9: {
     id: 9,
     photo: ProfilePhoto9,
-    video: [Page1AvatarVideo9, Page2AvatarVideo9, Page3AvatarVideo9],
+    video: [Page1AvatarVideo9, Page2AvatarVideo9, Page3AvatarVideo9, Page4AvatarVideo9],
     color: COLORS.YELLOW,
   },
   10: {
     id: 10,
     photo: ProfilePhoto10,
-    video: [Page1AvatarVideo10, Page2AvatarVideo10, Page3AvatarVideo10],
+    video: [Page1AvatarVideo10, Page2AvatarVideo10, Page3AvatarVideo10, Page4AvatarVideo10],
     color: COLORS.PINK,
   },
   11: {
     id: 11,
     photo: ProfilePhoto11,
-    video: [Page1AvatarVideo11, Page2AvatarVideo11, Page3AvatarVideo11],
+    video: [Page1AvatarVideo11, Page2AvatarVideo11, Page3AvatarVideo11, Page4AvatarVideo11],
     color: COLORS.ORANGE,
   },
   12: {
     id: 12,
     photo: ProfilePhoto12,
-    video: [Page1AvatarVideo12, Page2AvatarVideo12, Page3AvatarVideo12],
+    video: [Page1AvatarVideo12, Page2AvatarVideo12, Page3AvatarVideo12, Page4AvatarVideo12],
     color: COLORS.GREEN,
   },
   13: {
     id: 13,
     photo: ProfilePhoto13,
-    video: [Page1AvatarVideo13, Page2AvatarVideo13, Page3AvatarVideo13],
+    video: [Page1AvatarVideo13, Page2AvatarVideo13, Page3AvatarVideo13, Page4AvatarVideo13],
     color: COLORS.PURPLE,
   },
   14: {
     id: 14,
     photo: ProfilePhoto14,
-    video: [Page1AvatarVideo14, Page2AvatarVideo14, Page3AvatarVideo14],
+    video: [Page1AvatarVideo14, Page2AvatarVideo14, Page3AvatarVideo14, Page4AvatarVideo14],
     color: COLORS.PINK,
   },
 };
