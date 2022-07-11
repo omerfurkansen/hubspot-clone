@@ -5,7 +5,13 @@ import styles from './BuildMyPersona.module.scss';
 import { pages } from '../data';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import { setSelectedPage } from '../features/build-my-persona/buildMyPersonaSlice';
-import { FirstPageContent, SecondPageContent, ThirdPageContent, ForthPageContent } from '../features/build-my-persona';
+import {
+  FirstPageContent,
+  SecondPageContent,
+  ThirdPageContent,
+  ForthPageContent,
+  FifthPageContent,
+} from '../features/build-my-persona';
 
 export default function BuildMyPersona() {
   const dispatch = useAppDispatch();
@@ -71,6 +77,7 @@ export default function BuildMyPersona() {
             {selectedPage === 1 && <SecondPageContent />}
             {selectedPage === 2 && <ThirdPageContent />}
             {selectedPage === 3 && <ForthPageContent />}
+            {selectedPage === 4 && <FifthPageContent />}
           </div>
         </div>
       </span>
