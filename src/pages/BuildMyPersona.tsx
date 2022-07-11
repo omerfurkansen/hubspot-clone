@@ -11,6 +11,7 @@ import {
   ThirdPageContent,
   ForthPageContent,
   FifthPageContent,
+  SixthPageContent,
 } from '../features/build-my-persona';
 
 export default function BuildMyPersona() {
@@ -78,6 +79,7 @@ export default function BuildMyPersona() {
             {selectedPage === 2 && <ThirdPageContent />}
             {selectedPage === 3 && <ForthPageContent />}
             {selectedPage === 4 && <FifthPageContent />}
+            {selectedPage === 5 && <SixthPageContent />}
           </div>
         </div>
       </span>
