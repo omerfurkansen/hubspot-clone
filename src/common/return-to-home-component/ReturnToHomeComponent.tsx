@@ -1,6 +1,6 @@
-import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import styles from './ReturnToHomeComponent.module.scss';
-import { setCurrentPage } from '../features/landing-select/landingSelectSlice';
+import { setCurrentPage } from '../../features/landing-select/landingSelectSlice';
 
 export default function ReturnToHomeComponent() {
   const dispatch = useAppDispatch();

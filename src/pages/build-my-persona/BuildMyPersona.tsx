@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import ReturnToHomeComponent from '../common/ReturnToHomeComponent';
-import BuildMyPersonaBackground from '../common/BuildMyPersonaBackground';
+import ReturnToHomeComponent from '../../common/return-to-home-component/ReturnToHomeComponent';
+import BuildMyPersonaBackground from '../../common/build-my-persona-background/BuildMyPersonaBackground';
 import styles from './BuildMyPersona.module.scss';
-import { pages } from '../data';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
-import { setSelectedPage } from '../features/build-my-persona/buildMyPersonaSlice';
+import { pages } from '../../data';
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { setSelectedPage } from '../../features/build-my-persona/buildMyPersonaSlice';
 import {
   FirstPageContent,
   SecondPageContent,
@@ -13,7 +13,7 @@ import {
   FifthPageContent,
   SixthPageContent,
   SeventhPageContent,
-} from '../features/build-my-persona';
+} from '../../features/build-my-persona';
 
 export default function BuildMyPersona() {
   const dispatch = useAppDispatch();
