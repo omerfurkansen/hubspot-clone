@@ -12,6 +12,7 @@ body {
   color: rgb(255, 255, 255);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 h2 {

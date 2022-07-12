@@ -1,6 +1,6 @@
-import ReturnToHomeComponent from '../common/ReturnToHomeComponent';
-import SocialIconsComponent from '../common/SocialIconsComponent';
-import SplashScreenBackground from '../common/SplashScreenBackground';
+import ReturnToHomeComponent from '../../common/return-to-home-component/ReturnToHomeComponent';
+import SocialIconsComponent from '../../common/social-icons-component/SocialIconsComponent';
+import SplashScreenBackground from '../../common/splash-screen-background/SplashScreenBackground';
 import styles from './LearnMoreScreen.module.scss';
 import { Carousel } from 'react-responsive-carousel';
 import Video0 from '../assets/learn-more/education-0.mp4';

@@ -1,6 +1,6 @@
 import styles from './CopyrightComponent.module.scss';
 import HubspotLogo from '../assets/landing/hubspot-tools.svg';
-import { useAppSelector } from '../app/hooks';
+import { useAppSelector } from '../../app/hooks';
 
 export default function CopyrightComponent() {
   const isLandingPage = useAppSelector((state) => state.landingSelect.currentPage === 'landing');

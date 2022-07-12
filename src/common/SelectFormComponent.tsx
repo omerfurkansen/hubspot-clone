@@ -1,9 +1,27 @@
 import { useState } from 'react';
 import InputComponent from './InputComponent';
 import styles from '../pages/BuildMyPersona.module.scss';
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
+import { useAppDispatch } from '../app/hooks';
 
-export default function SelectFormComponent({ ...props }: { options: string[] }) {
+export default function SelectFormComponent({
+  ...props
+}: {
+  value?: string;
+  onChange?: ActionCreatorWithPayload<any, string>;
+  options: string[];
+}) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+
+  const dispatch = useAppDispatch();
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !selectedOptions.includes(e.currentTarget.value)) {
+      props.options.push(e.currentTarget.value);
+      setSelectedOptions([...selectedOptions, e.currentTarget.value]);
+      dispatch(props.onChange!(''));
+    }
+  };
 
   return (
     <div className={styles.selectFormContainer}>
@@ -31,7 +49,12 @@ export default function SelectFormComponent({ ...props }: { options: string[] })
           </span>
         ))}
       </div>
-      <InputComponent placeholder="If none of the options above apply, add one here and press enter." />
+      <InputComponent
+        value={props.value}
+        onChange={props.onChange}
+        onKeyDown={onKeyDown}
+        placeholder="If none of the options above apply, add one here and press enter."
+      />
     </div>
   );
 }

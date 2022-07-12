@@ -1,12 +1,12 @@
 import styles from './SplashScreen.module.scss';
 import { animated, useSpring, useSprings } from '@react-spring/web';
 import HubspotLogo from '../assets/landing/hubspot-tools.svg';
-import CopyrightComponent from '../common/CopyrightComponent';
-import SplashScreenBackground from '../common/SplashScreenBackground';
-import { fallIn as fallInSpring, rotateAndFall, fadeIn as fadeInSpring, MMP_TEXT } from '../common/TextAnimations';
+import CopyrightComponent from '../../common/copyright-component/CopyrightComponent';
+import SplashScreenBackground from '../../common/splash-screen-background/SplashScreenBackground';
+import { fallIn as fallInSpring, rotateAndFall, fadeIn as fadeInSpring, MMP_TEXT } from '../../common/TextAnimations';
 
-import { useAppDispatch } from '../app/hooks';
-import { setIsLoading } from '../features/landing-select/landingSelectSlice';
+import { useAppDispatch } from '../../app/hooks';
+import { setIsLoading } from '../../features/landing-select/landingSelectSlice';
 
 export default function SplashScreen() {
   const dispatch = useAppDispatch();

@@ -1,12 +1,12 @@
-import LandingBackground from '../common/LandingBackground';
-import CopyrightComponent from '../common/CopyrightComponent';
+import LandingBackground from '../common/landing-background/LandingBackground';
+import CopyrightComponent from '../common/copyright-component/CopyrightComponent';
 import LandingSelect from '../features/landing-select/LandingSelect';
 import LanguageDropdown from '../features/landing-select/LanguageDropdown';
-import SplashScreen from './SplashScreen';
+import SplashScreen from './splash-screen/SplashScreen';
 
 import { useAppSelector } from '../app/hooks';
-import LearnMoreScreen from './LearnMoreScreen';
-import BuildMyPersona from './BuildMyPersona';
+import LearnMoreScreen from './learn-more/LearnMoreScreen';
+import BuildMyPersona from './build-my-persona/BuildMyPersona';
 
 export default function Landing() {
   const isLoading = useAppSelector((state) => state.landingSelect.isLoading);
