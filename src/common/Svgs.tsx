@@ -1,3 +1,11 @@
+import Finance from '../assets/finance.svg';
+import Manufacturing from '../assets/manufacturing.svg';
+import Pharmaceutical from '../assets/pharmaceutical.svg';
+import Retail from '../assets/retail.svg';
+import Sales from '../assets/sales.svg';
+
+export { Finance, Manufacturing, Pharmaceutical, Retail, Sales };
+
 export function Phone() {
   return (
     <span>

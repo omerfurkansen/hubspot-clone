@@ -64,7 +64,7 @@
   flex-direction: column;
   padding: 0px 15% 5rem 10rem;
   overflow-y: scroll;
-  max-height: calc(100vh - 14rem);
+  max-height: 75vh;
   width: 53%;
 }
 
@@ -284,11 +284,12 @@
 }
 
 .bottomImageForSelection {
-  position: absolute;
-  bottom: -0.6rem;
-  left: 5rem;
-  width: 55%;
+  position: fixed;
+  bottom: -2rem;
+  left: 30%;
+  width: 45%;
   pointer-events: none;
+  transition: opacity .3s linear 0s, transform .3s linear 0s;; 
 }
 
 .bottomImageSpan {
@@ -311,7 +312,7 @@
   
 }
 
-@keyframes kIahBZ {
+@keyframes animation-fadeIn {
   0% {
     opacity: 0;
     transform: scale(0);
@@ -333,7 +334,7 @@
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  animation: 0.3s cubic-bezier(0.43, 1.44, 0.555, 1.175) 0s 1 normal none running kIahBZ;
+  animation: 0.3s cubic-bezier(0.43, 1.44, 0.555, 1.175) 0s 1 normal none running animation-fadeIn;
   transform-origin: 0px 50%;
 
   &Box {
