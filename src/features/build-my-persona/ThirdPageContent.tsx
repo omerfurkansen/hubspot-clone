@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../../pages/BuildMyPersona.module.scss';
+import styles from '../../pages/build-my-persona/BuildMyPersona.module.scss';
 import RangeComponent from '../../common/RangeComponent';
 import { Finance, Manufacturing, Pharmaceutical, Retail, Sales } from '../../common/Svgs';
 

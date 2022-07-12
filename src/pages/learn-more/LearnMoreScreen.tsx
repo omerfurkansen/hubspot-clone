@@ -3,10 +3,10 @@ import SocialIconsComponent from '../../common/social-icons-component/SocialIcon
 import SplashScreenBackground from '../../common/splash-screen-background/SplashScreenBackground';
 import styles from './LearnMoreScreen.module.scss';
 import { Carousel } from 'react-responsive-carousel';
-import Video0 from '../assets/learn-more/education-0.mp4';
-import Video1 from '../assets/learn-more/education-1.mp4';
-import Video2 from '../assets/learn-more/education-2.mp4';
-import Video3 from '../assets/learn-more/education-3.mp4';
+import Video0 from '../../assets/learn-more/education-0.mp4';
+import Video1 from '../../assets/learn-more/education-1.mp4';
+import Video2 from '../../assets/learn-more/education-2.mp4';
+import Video3 from '../../assets/learn-more/education-3.mp4';
 import { AnimationHandler, AnimationHandlerResponse } from 'react-responsive-carousel/lib/ts/components/Carousel/types';
 
 function BackgroundWhiteBalloon() {

@@ -1,4 +1,4 @@
-import styles from '../../pages/BuildMyPersona.module.scss';
+import styles from '../../pages/build-my-persona/BuildMyPersona.module.scss';
 import SelectFormComponent from '../../common/SelectFormComponent';
 import { Phone, Mail, TextMessaging, Facebook, Smiley } from '../../common/Svgs';
 import { useAppSelector } from '../../app/hooks';

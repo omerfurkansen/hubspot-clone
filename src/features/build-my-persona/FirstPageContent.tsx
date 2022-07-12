@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { profiles } from '../../data';
 import { setSelectedPersona } from './buildMyPersonaSlice';
-import styles from '../../pages/BuildMyPersona.module.scss';
+import styles from '../../pages/build-my-persona/BuildMyPersona.module.scss';
 import InputComponent from '../../common/InputComponent';
 
 export default function FirstPageContent() {
