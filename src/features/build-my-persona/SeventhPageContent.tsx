@@ -16,12 +16,12 @@ export default function SeventhPageContent() {
       <div className={styles.contentTitle}>How Do They Gain Information for Their Job?</div>
       <InputComponent placeholder={'E.g. do they take online courses or go to conferances?'} />
       <div className={styles.contentTitle}>What Social Networks Do They Belong To?</div>
-      <div className={styles.communicationMethodsBox}>
+      <div className={styles.circularButtonsBox}>
         {platforms.map((platform, index) => {
           return (
-            <div key={index} className={styles.communicationMethodsItem}>
-              <div className={styles.communicationMethodsItemImage}>{platform.image}</div>
-              <div className={styles.communicationMethodsItemTitle}>{platform.content}</div>
+            <div key={index} className={styles.circularButtonsItem}>
+              <div className={styles.circularButtonsItemImage}>{platform.image}</div>
+              <div className={styles.circularButtonsItemTitle}>{platform.content}</div>
             </div>
           );
         })}

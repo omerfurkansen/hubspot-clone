@@ -15,7 +15,7 @@ const buildMyPersonaSlice = createSlice({
     },
     setSelectedPage: (state, action) => {
       state.selectedPage = action.payload;
-    }
+    },
   }
 });
 

@@ -30,12 +30,12 @@ export default function SixthPageContent() {
       <div className={styles.contentTitle}>What Tools Do They Use or Need to Do Their Job?</div>
       <SelectFormComponent options={options} />
       <div className={styles.contentTitle}>How Do They Prefer to Communicate with Vendors/Other Businesses?</div>
-      <div className={styles.communicationMethodsBox}>
+      <div className={styles.circularButtonsBox}>
         {communicationMethods.map((method, index) => {
           return (
-            <div key={index} className={styles.communicationMethodsItem}>
-              <div className={styles.communicationMethodsItemImage}>{method.image}</div>
-              <div className={styles.communicationMethodsItemTitle}>{method.content}</div>
+            <div key={index} className={styles.circularButtonsItem}>
+              <div className={styles.circularButtonsItemImage}>{method.image}</div>
+              <div className={styles.circularButtonsItemTitle}>{method.content}</div>
             </div>
           );
         })}
