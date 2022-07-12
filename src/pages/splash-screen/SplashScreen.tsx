@@ -1,6 +1,6 @@
 import styles from './SplashScreen.module.scss';
 import { animated, useSpring, useSprings } from '@react-spring/web';
-import HubspotLogo from '../assets/landing/hubspot-tools.svg';
+import HubspotLogo from '../../assets/landing/hubspot-tools.svg';
 import CopyrightComponent from '../../common/copyright-component/CopyrightComponent';
 import SplashScreenBackground from '../../common/splash-screen-background/SplashScreenBackground';
 import { fallIn as fallInSpring, rotateAndFall, fadeIn as fadeInSpring, MMP_TEXT } from '../../common/TextAnimations';

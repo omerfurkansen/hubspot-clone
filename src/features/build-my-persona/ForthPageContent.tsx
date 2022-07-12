@@ -1,5 +1,5 @@
 import InputComponent from '../../common/InputComponent';
-import styles from '../../pages/BuildMyPersona.module.scss';
+import styles from '../../pages/build-my-persona/BuildMyPersona.module.scss';
 
 export default function ForthPageContent() {
   return (

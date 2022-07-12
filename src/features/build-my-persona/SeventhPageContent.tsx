@@ -1,4 +1,4 @@
-import styles from '../../pages/BuildMyPersona.module.scss';
+import styles from '../../pages/build-my-persona/BuildMyPersona.module.scss';
 import { Facebook, Instagram, Twitter, LinkedIn, Pinterest } from '../../common/Svgs';
 import InputComponent from '../../common/InputComponent';
 

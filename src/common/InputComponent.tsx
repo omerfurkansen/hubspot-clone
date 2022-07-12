@@ -1,7 +1,7 @@
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { useState } from 'react';
 import { useAppDispatch } from '../app/hooks';
-import styles from '../pages/BuildMyPersona.module.scss';
+import styles from '../pages/build-my-persona/BuildMyPersona.module.scss';
 
 export default function InputComponent({
   ...props

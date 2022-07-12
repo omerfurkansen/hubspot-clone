@@ -1,4 +1,4 @@
-import styles from '../../pages/BuildMyPersona.module.scss';
+import styles from '../../pages/build-my-persona/BuildMyPersona.module.scss';
 import InputComponent from '../../common/InputComponent';
 import SelectFormComponent from '../../common/SelectFormComponent';
 import { useAppSelector } from '../../app/hooks';
