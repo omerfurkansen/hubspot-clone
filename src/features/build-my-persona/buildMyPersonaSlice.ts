@@ -4,6 +4,8 @@ import { profiles } from "../../data";
 const initialState = {
   selectedPersona: profiles[0],
   selectedPage: 0,
+  additionalBiggestChallenge: "",
+  additionalTools: "",
 };
 
 const buildMyPersonaSlice = createSlice({
@@ -16,9 +18,15 @@ const buildMyPersonaSlice = createSlice({
     setSelectedPage: (state, action) => {
       state.selectedPage = action.payload;
     },
+    setAdditionalBiggestChallenge: (state, action) => {
+      state.additionalBiggestChallenge = action.payload;
+    },
+    setAdditionalTools: (state, action) => {
+      state.additionalTools = action.payload;
+    }
   }
 });
 
-export const { setSelectedPersona, setSelectedPage } = buildMyPersonaSlice.actions;
+export const { setSelectedPersona, setSelectedPage, setAdditionalBiggestChallenge, setAdditionalTools } = buildMyPersonaSlice.actions;
 
 export default buildMyPersonaSlice.reducer;

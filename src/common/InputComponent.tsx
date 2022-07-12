@@ -1,12 +1,23 @@
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { useState } from 'react';
+import { useAppDispatch } from '../app/hooks';
 import styles from '../pages/BuildMyPersona.module.scss';
 
-export default function InputComponent({ ...props }: { placeholder: string }) {
+export default function InputComponent({
+  ...props
+}: {
+  value?: string;
+  onChange?: ActionCreatorWithPayload<any, string>;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  placeholder: string;
+}) {
   const [inputValue, setInputValueTo] = useState('');
   const [showPencil, setShowPencilTo] = useState(false);
 
+  const dispatch = useAppDispatch();
+
   const onChangeInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValueTo(e.target.value);
+    props.onChange ? dispatch(props.onChange!(e.target.value)) : setInputValueTo(e.target.value);
   };
 
   return (
@@ -16,10 +27,11 @@ export default function InputComponent({ ...props }: { placeholder: string }) {
         type="text"
         placeholder={`${props.placeholder}`}
         className={styles.contentInput}
-        value={inputValue}
+        value={props.value || inputValue}
         onChange={onChangeInputValue}
         onFocus={() => setShowPencilTo(true)}
         onBlur={() => setShowPencilTo(false)}
+        onKeyDown={props.onKeyDown}
       />
       <div
         className={styles.contentInputPen}
